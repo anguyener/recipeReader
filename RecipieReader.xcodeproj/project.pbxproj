@@ -14,6 +14,8 @@
 		795D82671F7AFB7E00327520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795D82651F7AFB7E00327520 /* LaunchScreen.storyboard */; };
 		795D82721F7AFB7E00327520 /* RecipieReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D82711F7AFB7E00327520 /* RecipieReaderTests.swift */; };
 		795D827D1F7AFB7E00327520 /* RecipieReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D827C1F7AFB7E00327520 /* RecipieReaderUITests.swift */; };
+		795D828B1F7AFC4F00327520 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D828A1F7AFC4F00327520 /* Ingredient.swift */; };
+		795D828D1F7AFE8900327520 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795D828C1F7AFE8900327520 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		795D82781F7AFB7E00327520 /* RecipieReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipieReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		795D827C1F7AFB7E00327520 /* RecipieReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieReaderUITests.swift; sourceTree = "<group>"; };
 		795D827E1F7AFB7E00327520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		795D828A1F7AFC4F00327520 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		795D828C1F7AFE8900327520 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				795D82631F7AFB7E00327520 /* Assets.xcassets */,
 				795D82651F7AFB7E00327520 /* LaunchScreen.storyboard */,
 				795D82681F7AFB7E00327520 /* Info.plist */,
+				795D828A1F7AFC4F00327520 /* Ingredient.swift */,
+				795D828C1F7AFE8900327520 /* Recipe.swift */,
 			);
 			path = RecipieReader;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 			files = (
 				795D825F1F7AFB7E00327520 /* ViewController.swift in Sources */,
 				795D825D1F7AFB7E00327520 /* AppDelegate.swift in Sources */,
+				795D828B1F7AFC4F00327520 /* Ingredient.swift in Sources */,
+				795D828D1F7AFE8900327520 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
