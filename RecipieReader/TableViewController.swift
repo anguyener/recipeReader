@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableViewController: UIViewController {
 
     var recipies: [Recipe] = []
     
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
+       // tableView.delegate = self
         fetchData()
     }
 
@@ -37,9 +38,15 @@ class ViewController: UIViewController {
         task.resume()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? RecipieViewController else { return }
+        guard let source = sender as? RecipieCell else { return }
+        destination.recipie = source.recipie
+    }
+    
 }
 
-extension ViewController: UITableViewDataSource {
+extension TableViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -52,8 +59,19 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let recipie = recipies[indexPath.item]
         let cell  = tableView.dequeueReusableCell(withIdentifier: "RecipieCell", for: indexPath) as! RecipieCell
-        cell.recipieNameLabel.text = recipie.name
+      //  cell.recipieNameLabel.text = recipie.name
+        cell.recipie = recipie
         return cell
     }
     
 }
+
+//extension TableViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let recipieViewController = storyboard.instantiateViewController(withIdentifier: "RecipieViewController") as! RecipieViewController
+//        recipieViewController.recipie = recipies[indexPath.item]
+//       // present(recipieViewController, animated: true, completion: nil)
+//        navigationController?.pushViewController(recipieViewController, animated: true)
+//    }
+//}

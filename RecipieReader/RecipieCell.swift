@@ -10,6 +10,11 @@ import UIKit
 
 class RecipieCell: UITableViewCell {
     
+    var recipie: Recipe? {
+        didSet(newValue) {
+            self.recipieNameLabel.text = self.recipie?.name
+        }
+    }
     
     @IBOutlet weak var recipieNameLabel: UILabel!
     
